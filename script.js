@@ -177,6 +177,7 @@ form.addEventListener("submit", async (e) => {
 
   // Conversion of currencies using API call
   try {
+    resultBlock.style.transform = "translateX(-200%)";
     const res = await fetch(
       `.netlify/functions/convert-currencies?baseCur=${baseCur}&convertCur=${convertCur}&amount=${amount}`
     );

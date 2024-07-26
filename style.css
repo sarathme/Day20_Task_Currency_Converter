@@ -326,7 +326,9 @@ input::placeholder {
 }
 
 .result-block {
-  width: 50%;
+  width: 70%;
+  font-size: 1.2rem;
+  font-weight: 700;
   margin: 0 auto;
   background-color: var(--clr-primary-900);
   color: var(--clr-accent-100);
