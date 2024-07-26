@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+:root {
+  --clr-primary-400: hsl(122, 10%, 49%);
+  --clr-secondary-400: hsl(73, 25%, 70%);
+  --clr-accent-100: hsl(36, 93%, 94%);
+  --clr-primary-900: hsl(180, 35%, 16%);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  background: var(--clr-accent-100);
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+input::placeholder {
+  color: inherit;
+}
+
+.primary-heading {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.container {
+  width: min(90%, 70rem);
+  margin: 0 auto;
+  padding: 4em 0.5em;
+}
+
+.converter__form {
+  width: 100%;
+  display: grid;
+  gap: 2rem;
+  margin-top: 1rem;
+  /* place-content: center; */
+  min-height: 40vh;
+}
+
+@media (min-width: 51.25em) {
+  .primary-heading {
+    font-size: 3.5rem;
+  }
+  .converter__form {
+    gap: 1rem;
+    grid-template-columns: 0.7fr repeat(2, 1fr) 0.3fr;
+    place-content: center;
+  }
+
+  .options {
+    max-height: 10vh;
+  }
+
+  .input_group {
+    padding: 2em;
+  }
+}
+
+@media (max-width: 31.875em) {
+  .primary-heading {
+    font-size: 2.4rem;
+  }
+}
+
+.input_group {
+  display: grid;
+  gap: 1rem;
+  position: relative;
+  padding: 0.3em 2em 0.7em 1em;
+  isolation: isolate;
+}
+
+.input_group label {
+  color: var(--clr-accent-100);
+  font-weight: 700;
+  z-index: 3;
+  height: 30%;
+  padding: 0.5em 1em;
+}
+
+.submit-btn {
+  background-color: var(--clr-primary-900);
+  cursor: pointer;
+  width: 100%;
+  align-self: start;
+  height: 4rem;
+  border-radius: 4em;
+  padding: 0.5em 1.2em;
+  transform: scale(0.7);
+  outline: none;
+  transition: transform 150ms ease-in;
+}
+
+.submit-btn:focus-visible,
+.submit-btn:hover {
+  transform: scale(0.8);
+}
+
+.submit-btn svg {
+  width: 90%;
+  height: 90%;
+  fill: var(--clr-accent-100);
+}
+
+.input_group input {
+  position: absolute;
+  width: 100%;
+  background: var(--clr-primary-400);
+  color: var(--clr-accent-100);
+  inset: 0;
+  padding: 2.5em 1em 1.5em 2em;
+  border-radius: 0.4rem;
+  outline: none;
+  border: none;
+}
+.input_group input:focus-visible {
+  outline: 4px solid var(--clr-primary-900);
+  outline-offset: 0.1rem;
+}
+
+.dropdown-block {
+  padding: 2em;
+  position: relative;
+
+  border-radius: 0.5em;
+}
+
+.select {
+  font-size: 0.68rem;
+  position: absolute;
+  background-color: var(--clr-primary-400);
+  color: var(--clr-accent-100);
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  padding: 0.5em 2.5em;
+  border-radius: 0.5em;
+}
+
+.select > span {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.select:focus {
+  outline: 4px solid var(--clr-primary-900);
+  outline-offset: 0.1rem;
+}
+
+.caret {
+  display: block;
+  position: absolute;
+
+  top: 0;
+  right: 0;
+  height: 100%;
+  background: var(--clr-primary-900);
+  width: 3em;
+  height: 100%;
+  border-radius: 0 0.5em 0.5em 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.caret::after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  right: 1em;
+  width: 0;
+  height: 0;
+  border: 0.65em solid transparent;
+  border-top-color: var(--clr-accent-100);
+}
+
+.options {
+  list-style: none;
+  max-height: 40vh;
+  position: absolute;
+  font-size: 1rem;
+  font-weight: 700;
+  top: 5em;
+  left: 0;
+  background-color: var(--clr-primary-400);
+  width: 100%;
+  overflow: scroll;
+  transform: scaleY(0);
+  transition: transform 200ms ease-in-out, opacity 150ms ease-out;
+  transform-origin: top;
+  border-radius: 1em;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+  border: none;
+  opacity: 0;
+  z-index: -1;
+}
+
+.search__box {
+  background-color: var(--clr-secondary-400);
+  color: var(--clr-primary-900);
+  padding: 0.5em 1em;
+  width: 100%;
+  height: 3rem;
+  position: sticky;
+  font-weight: 700;
+  top: 0;
+  left: 0;
+  outline: none;
+  border: none;
+  border-radius: 0.4em 0.5em 0 0;
+}
+
+.options li {
+  cursor: pointer;
+  padding: 0.5em;
+  margin-bottom: 0.5rem;
+  transition: background-color 200ms ease-in;
+}
+
+.options li:hover,
+.selected-option {
+  background-color: var(--clr-primary-900);
+  color: var(--clr-accent-100);
+  /* border-radius: 0.5em; */
+}
+
+.options-open {
+  transform: scaleY(1);
+  border: 2px solid var(--clr-primary-900);
+  opacity: 100;
+  z-index: 3;
+}

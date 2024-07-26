@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./style.css" rel="stylesheet" />
+    <title>Currency Converter</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="primary-heading">Currency Converter</h1>
+      <form class="converter__form">
+        <div class="input_group">
+          <label for="amount" class="input__label">Enter amount</label>
+          <input
+            type="number"
+            step="0.01"
+            id="amount"
+            min="0"
+            tabindex="1"
+            placeholder="0.00"
+            required />
+        </div>
+        <div class="dropdown-block">
+          <div class="select" tabindex="2">
+            <span>From</span>
+            <h2 class="selected"></h2>
+            <span class="caret"></span>
+          </div>
+
+          <ul class="options">
+            <input
+              type="text"
+              class="search__box"
+              placeholder="Search currency using country name" />
+          </ul>
+        </div>
+        <div class="dropdown-block">
+          <div class="select" tabindex="3">
+            <span>To</span>
+            <h2 class="selected"></h2>
+            <span class="caret"></span>
+          </div>
+          <ul class="options">
+            <input
+              type="text"
+              class="search__box"
+              placeholder="Search currency using country name" />
+          </ul>
+        </div>
+        <button type="submit" class="submit-btn"
+          ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path
+              d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" /></svg
+        ></button>
+      </form>
+    </div>
+    <script src="./script.js" type="module"></script>
+  </body>
+</html>
