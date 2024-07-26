@@ -324,3 +324,15 @@ input::placeholder {
   opacity: 100;
   z-index: 3;
 }
+
+.result-block {
+  width: 50%;
+  margin: 0 auto;
+  background-color: var(--clr-primary-900);
+  color: var(--clr-accent-100);
+  padding: 1.7em;
+  border-radius: 1em;
+  text-align: center;
+  transform: translateX(-200%);
+  transition: transform 200ms ease-in;
+}

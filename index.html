@@ -24,7 +24,7 @@
         <div class="dropdown-block">
           <div class="select" tabindex="2">
             <span>From</span>
-            <h2 class="selected" id="from"></h2>
+            <h2 class="selected" data-selected="false" id="from"></h2>
             <span class="caret"></span>
           </div>
 
@@ -32,20 +32,20 @@
             <input
               type="text"
               class="search__box"
-              placeholder="Search currency using country name" />
+              placeholder="Search currency using currency name" />
           </ul>
         </div>
         <div class="dropdown-block">
           <div class="select" tabindex="3">
             <span>To</span>
-            <h2 class="selected" id="from"></h2>
+            <h2 class="selected" data-selected="false" id="to"></h2>
             <span class="caret"></span>
           </div>
           <ul class="options">
             <input
               type="text"
               class="search__box"
-              placeholder="Search currency using country name" />
+              placeholder="Search currency using currency name" />
           </ul>
         </div>
         <button type="submit" class="submit-btn"
@@ -54,6 +54,9 @@
               d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" /></svg
         ></button>
       </form>
+      <div class="result-block">
+        <p class="result"></p>
+      </div>
     </div>
     <script src="./script.js" type="module"></script>
   </body>

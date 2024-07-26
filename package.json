@@ -1,0 +1,22 @@
+{
+  "name": "day20_task_currencies",
+  "version": "1.0.0",
+  "description": "Convert correncies",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarathme/Day20_Task_Currency_Converter.git"
+  },
+  "author": "Sarasraman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarathme/Day20_Task_Currency_Converter/issues"
+  },
+  "homepage": "https://github.com/sarathme/Day20_Task_Currency_Converter#readme",
+  "devDependencies": {
+    "netlify-cli": "^17.33.4"
+  }
+}
